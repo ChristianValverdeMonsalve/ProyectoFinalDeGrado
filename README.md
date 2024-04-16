@@ -27,8 +27,8 @@
 |--------|-------------------|-------|------|----------------------|---------------------------------|-------------------------|
 | GET    | /class            | YES   | user | Get All Classes      | `query params`                  | [{clases}]              |
 | GET    | /class/:classId   | YES   | user | Get One Class        |                                 | {class}                 |
-| POST   | /class            | YES   | admin| Create one Class     | `classId`, `className`, `timeTable`, `duration`, `monitorId`, `maxUsers`, `currentUsers`| {class} |
-| PUT    | /class/:classId   | YES   | admin| Update one Class     |`classId`, `className`, `timeTable`, `duration`, `monitorId`, `maxUsers`, `currentUsers` | {message: 'Class updated'} |
+| POST   | /class            | YES   | admin| Create one Class     | `classId`, `className`, `timeTable`, `date`, `duration`, `monitorId`, `maxUsers`, `currentUsers`| {class} |
+| PUT    | /class/:classId   | YES   | admin| Update one Class     |`classId`, `className`, `timeTable`, `date`, `duration`, `monitorId`, `maxUsers`, `currentUsers` | {message: 'Class updated'} |
 | DELETE | /class/:classId   | YES   | admin| Delete one Class     |                                 | {message: 'Class deleted'} |
 
 ### Booking Endpoint
