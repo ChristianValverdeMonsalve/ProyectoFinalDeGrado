@@ -38,8 +38,8 @@
 | GET    | /booking            | YES   | admin| Get All Bookings     | `query params`                  | [{bookings}]            |
 | GET    | /booking/:bookingId | YES   | admin| Get One Booking      | `query params`                  | {booking}               |
 | GET    | /booking/:userdId   | YES   | user | Get Own Bookings     | `query params`                  | {bookings}              |
-| POST   | /booking/:userId    | YES   | user | Create One Booking   | `userId`, `classId`, `date_time`| {booking}               |
-| PUT    | /booking/:bookingId | YES   | admin| Update One Booking   | `userId`, `classId`, `date_time`| {message: 'Booking updated'} |
+| POST   | /booking/:userId    | YES   | user | Create One Booking   | `userId`, `classId`             | {booking}               |
+| PUT    | /booking/:bookingId | YES   | admin| Update One Booking   | `userId`, `classId`             | {message: 'Booking updated'} |
 | DELETE | /booking/:bookingId | YES   | user | Delete Own Booking   |                                 | {message: 'Booking deleted'} |
 
 
