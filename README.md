@@ -25,9 +25,7 @@
 
 | METHOD |      ENDPOINT     | TOKEN | ROLE |     DESCRIPTION      |            POST PARAMS          |         RETURNS         |
 |--------|-------------------|-------|------|----------------------|---------------------------------|-------------------------|
-| GET    | /class            | YES   | admin| Get All Classes      | `query params`                  | [{clases}]              |
 | GET    | /class            | YES   | user | Get All Classes      | `query params`                  | [{clases}]              |
-| GET    | /class/:classId   | YES   | admin| Get One Class        |                                 | {class}                 |
 | GET    | /class/:classId   | YES   | user | Get One Class        |                                 | {class}                 |
 | POST   | /class            | YES   | admin| Create one Class     | `classId`, `className`, `timeTable`, `duration`, `monitorId`, `maxUsers`, `currentUsers`| {class} |
 | PUT    | /class/:classId   | YES   | admin| Update one Class     |`classId`, `className`, `timeTable`, `duration`, `monitorId`, `maxUsers`, `currentUsers` | {message: 'Class updated'} |
@@ -39,12 +37,9 @@
 |--------|---------------------|-------|------|----------------------|---------------------------------|-------------------------|
 | GET    | /booking            | YES   | admin| Get All Bookings     | `query params`                  | [{bookings}]            |
 | GET    | /booking/:bookingId | YES   | admin| Get One Booking      | `query params`                  | {booking}               |
-| GET    | /booking/profile    | YES   | user | Get Own Bookings     | `query params`                  | {bookings}              |
-| POST   | /booking            | YES   | admin| Create One Booking   | `userId`, `classId`, `date_time`| {booking}               |
-| POST   | /booking/profile    | YES   | user | Create Own Booking   | `userId`, `classId`, `date_time`| {booking}               |
+| GET    | /booking/:userdId   | YES   | user | Get Own Bookings     | `query params`                  | {bookings}              |
+| POST   | /booking/:userId    | YES   | user | Create One Booking   | `userId`, `classId`, `date_time`| {booking}               |
 | PUT    | /booking/:bookingId | YES   | admin| Update One Booking   | `userId`, `classId`, `date_time`| {message: 'Booking updated'} |
-| PUT    | /booking/:bookingId | YES   | user | Update Own Booking   | `userId`, `classId`, `date_time`| {message: 'Booking updated'} |
-| DELETE | /booking/:bookingId | YES   | admin| Delete One Booking   |                                 | {message: 'Booking deleted'} |
 | DELETE | /booking/:bookingId | YES   | user | Delete Own Booking   |                                 | {message: 'Booking deleted'} |
 
 
